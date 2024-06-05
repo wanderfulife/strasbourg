@@ -9,7 +9,7 @@
 		<label for="2">TEXT</label>
 		<input type="checkbox" id="2" value="" v-model="VAR">
 		<br>
-		<label for="3">À vélo partagé (VLille, Tier, Lime) // Shared bike</label>
+		<label for="3">TEXt</label>
 		<input type="checkbox" id="3" value="Vélo partagé" v-model="VAR">
 		<br>
 		<div v-if="VAR.includes('???')">
@@ -26,9 +26,9 @@
 				</option>
 			</select>
 		</div>
-		<input v-if="ModeDeplacement.includes('Autre')" class="form-control" type="text"
-			v-model="ModeDeplacementPrecision" placeholder="Precisez">
-		<button v-if="ModeDeplacement" @click="next" class="btn-next">Suivant</button>
+		<input v-if="VAR.includes('Autre')" class="form-control" type="text" v-model="VAR_Precision"
+			placeholder="Precisez">
+		<button v-if="VAR" @click="next" class="btn-next">Suivant</button>
 		<button @click="back" class="btn-return">retour</button>
 	</div>
 </template>
