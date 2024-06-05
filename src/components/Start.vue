@@ -272,8 +272,129 @@
 			<button @click="back" class="btn-return">retour</button>
 		</div>
 
-		<div v-if="((level === 17 && Q1 === 2 || level === 15 && Q1 === 1) && Q14 === 1) ||
+
+
+
+		<div id="q17_1" v-if="((level === 17 && Q1 === 2 || level === 15 && Q1 === 1) && Q14 === 1) ||
 			((level === 16 && Q1 === 2 || level === 14 && Q1 === 1) && Q14 === 2)">
+			<h2>Que souhaiteriez-vous améliorer dans ces zones ?</h2>
+			<h1> Avoir plus d'espace de repos
+				(bancs, espaces verts) </h1>
+			<select v-model="Q17_1" class="form-control">
+				<option v-for="option in q17" :key="option.id" :value="option.output">
+					{{ option.text }}
+				</option>
+			</select>
+			<button v-if="Q17_1" @click="next" class="btn-next">Suivant</button>
+			<button @click="back" class="btn-return">retour</button>
+		</div>
+
+		<div id="q17_2" v-if="((level === 18 && Q1 === 2 || level === 16 && Q1 === 1) && Q14 === 1) ||
+			((level === 17 && Q1 === 2 || level === 15 && Q1 === 1) && Q14 === 2)">
+			<h2>Que souhaiteriez-vous améliorer dans ces zones ?</h2>
+			<h1> Amélioration vis-à-vis du stationnement illicite / sauvage</h1>
+			<select v-model="Q17_2" class="form-control">
+				<option v-for="option in q17" :key="option.id" :value="option.output">
+					{{ option.text }}
+				</option>
+			</select>
+			<button v-if="Q17_2" @click="next" class="btn-next">Suivant</button>
+			<button @click="back" class="btn-return">retour</button>
+		</div>
+
+		<div id="q17_3" v-if="((level === 19 && Q1 === 2 || level === 17 && Q1 === 1) && Q14 === 1) ||
+			((level === 18 && Q1 === 2 || level === 16 && Q1 === 1) && Q14 === 2)">
+			<h2>Que souhaiteriez-vous améliorer dans ces zones ?</h2>
+			<h1> Amélioration de la signalisation pour une meilleure compréhension des zones de rencontre</h1>
+			<select v-model="Q17_3" class="form-control">
+				<option v-for="option in q17" :key="option.id" :value="option.output">
+					{{ option.text }}
+				</option>
+			</select>
+			<button v-if="Q17_3" @click="next" class="btn-next">Suivant</button>
+			<button @click="back" class="btn-return">retour</button>
+		</div>
+
+		<div id="q17_4" v-if="((level === 20 && Q1 === 2 || level === 18 && Q1 === 1) && Q14 === 1) ||
+			((level === 19 && Q1 === 2 || level === 17 && Q1 === 1) && Q14 === 2)">
+			<h2>Que souhaiteriez-vous améliorer dans ces zones ?</h2>
+			<h1>Faire des actions de communication pour le respect et la connaissance des zones de rencontre</h1>
+			<select v-model="Q17_4" class="form-control">
+				<option v-for="option in q17" :key="option.id" :value="option.output">
+					{{ option.text }}
+				</option>
+			</select>
+			<button v-if="Q17_4" @click="next" class="btn-next">Suivant</button>
+			<button @click="back" class="btn-return">retour</button>
+		</div>
+
+		<div id="q17_5" v-if="((level === 21 && Q1 === 2 || level === 19 && Q1 === 1) && Q14 === 1) ||
+			((level === 20 && Q1 === 2 || level === 18 && Q1 === 1) && Q14 === 2)">
+			<h2>Que souhaiteriez-vous améliorer dans ces zones ?</h2>
+			<h1>Faire un marquage spécifique au sol pour une meilleure compréhension</h1>
+			<select v-model="Q17_5" class="form-control">
+				<option v-for="option in q17" :key="option.id" :value="option.output">
+					{{ option.text }}
+				</option>
+			</select>
+			<button v-if="Q17_5" @click="next" class="btn-next">Suivant</button>
+			<button @click="back" class="btn-return">retour</button>
+		</div>
+
+		<div id="q17_6" v-if="((level === 22 && Q1 === 2 || level === 20 && Q1 === 1) && Q14 === 1) ||
+			((level === 21 && Q1 === 2 || level === 19 && Q1 === 1) && Q14 === 2)">
+			<h2>Que souhaiteriez-vous améliorer dans ces zones ?</h2>
+			<h1>Changement de régime (Zone 30, Aire piétonne)</h1>
+			<select v-model="Q17_6" class="form-control">
+				<option v-for="option in q17" :key="option.id" :value="option.output">
+					{{ option.text }}
+				</option>
+			</select>
+			<button v-if="Q17_6" @click="next" class="btn-next">Suivant</button>
+			<button @click="back" class="btn-return">retour</button>
+		</div>
+
+
+		<div id="q17_7" v-if="((level === 23 && Q1 === 2 || level === 21 && Q1 === 1) && Q14 === 1) ||
+			((level === 22 && Q1 === 2 || level === 20 && Q1 === 1) && Q14 === 2)">
+			<h2>Que souhaiteriez-vous améliorer dans ces zones ?</h2>
+			<h1>Réaménagement de la rue (suppression du trottoir)</h1>
+			<select v-model="Q17_7" class="form-control">
+				<option v-for="option in q17" :key="option.id" :value="option.output">
+					{{ option.text }}
+				</option>
+			</select>
+			<button v-if="Q17_7" @click="next" class="btn-next">Suivant</button>
+			<button @click="back" class="btn-return">retour</button>
+		</div>
+
+		<div id="sexe" v-if="((level === 24 && Q1 === 2 || level === 22 && Q1 === 1) && Q14 === 1) ||
+			((level === 23 && Q1 === 2 || level === 21 && Q1 === 1) && Q14 === 2)">
+			<h2>Sexe de la personne interviewé ?</h2>
+			<select v-model="Sexe" class="form-control">
+				<option v-for="option in sexe" :key="option.id" :value="option.output">
+					{{ option.text }}
+				</option>
+			</select>
+			<button v-if="Sexe" @click="next" class="btn-next">Suivant</button>
+			<button @click="back" class="btn-return">retour</button>
+		</div>
+
+		<div id="age" v-if="((level === 25 && Q1 === 2 || level === 23 && Q1 === 1) && Q14 === 1) ||
+			((level === 24 && Q1 === 2 || level === 22 && Q1 === 1) && Q14 === 2)">
+			<h2>Age de la personne interviewé ?</h2>
+			<select v-model="Age" class="form-control">
+				<option v-for="option in age" :key="option.id" :value="option.output">
+					{{ option.text }}
+				</option>
+			</select>
+			<button v-if="Age" @click="next" class="btn-next">Suivant</button>
+			<button @click="back" class="btn-return">retour</button>
+		</div>
+
+
+		<div v-if="((level === 26 && Q1 === 2 || level === 24 && Q1 === 1) && Q14 === 1) ||
+			((level === 25 && Q1 === 2 || level === 23 && Q1 === 1) && Q14 === 2)">
 			<button @click="submitSurvey" class="btn-next">FINIR QUESTIONNAIRE</button>
 			<button @click="back" class="btn-return">retour</button>
 		</div>
@@ -289,7 +410,7 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-import { q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, age, sexe } from "./reponses";
+import { q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, age, sexe } from "./reponses";
 import GareSelector from "./GareSelector.vue";
 import CommuneSelector from './CommuneSelector.vue';
 import { db } from "../firebaseConfig";
@@ -301,6 +422,8 @@ const surveyCollectionRef = collection(db, "Strasbourg");
 const level = ref(0);
 const startDate = ref('');
 const ENQUETEUR = ref('');
+const Sexe = ref('');
+const Age = ref('');
 const Q1 = ref('');
 const Q2 = ref('');
 const Q2_DETAIL = ref('');
@@ -322,6 +445,13 @@ const Q14 = ref('');
 const Q15 = ref('');
 const Q16 = ref([]);
 const Q16_DETAIL = ref('');
+const Q17_1 = ref('');
+const Q17_2 = ref('');
+const Q17_3 = ref('');
+const Q17_4 = ref('');
+const Q17_5 = ref('');
+const Q17_6 = ref('');
+const Q17_7 = ref('');
 
 
 
@@ -358,6 +488,8 @@ const submitSurvey = async () => {
 		JOUR: new Date().toLocaleDateString("fr-FR", { weekday: 'long' }),
 		ENQUETEUR: ENQUETEUR.value,
 		HEURE_FIN: new Date().toLocaleTimeString("fr-FR").slice(0, 8),
+		Sexe: Sexe.value,
+		Age: Age.value,
 		Q1: Q1.value,
 		Q2: Q2.value,
 		Q2_DETAIL: Q2_DETAIL.value,
@@ -379,11 +511,20 @@ const submitSurvey = async () => {
 		Q15: Q15.value,
 		Q16: Q16.value,
 		Q16_DETAIL: Q16_DETAIL.value,
+		Q17_1: Q17_1.value,
+		Q17_2: Q17_2.value,
+		Q17_3: Q17_3.value,
+		Q17_4: Q17_4.value,
+		Q17_5: Q17_5.value,
+		Q17_6: Q17_6.value,
+		Q17_7: Q17_7.value,
 
 	});
 	level.value = 1;
 	startDate.value = "";
 	getDocCount();
+	Sexe.value = "";
+	Age.value = "";
 	Q1.value = "";
 	Q2.value = "";
 	Q2_DETAIL.value = "";
@@ -405,6 +546,13 @@ const submitSurvey = async () => {
 	Q15.value = "";
 	Q16.value = [];
 	Q16_DETAIL.value = "";
+	Q17_1.value = "";
+	Q17_2.value = "";
+	Q17_3.value = "";
+	Q17_4.value = "";
+	Q17_5.value = "";
+	Q17_6.value = "";
+	Q17_7.value = "";
 };
 
 const downloadData = async () => {
@@ -421,6 +569,8 @@ const downloadData = async () => {
 			JOUR: "JOUR",
 			HEURE_DEBUT: "HEURE_DEBUT",
 			HEURE_FIN: "HEURE_FIN",
+			Sexe: "Sexe",
+			Age: "Age",
 			Q1: "Q1",
 			Q2: "Q2",
 			Q2_DETAIL: "Q2_DETAIL",
@@ -442,6 +592,14 @@ const downloadData = async () => {
 			Q15: "Q15",
 			Q16: "Q16",
 			Q16_DETAIL: "Q16_DETAIL",
+			Q17_1: "Q17_1",
+			Q17_2: "Q17_2",
+			Q17_3: "Q17_3",
+			Q17_4: "Q17_4",
+			Q17_5: "Q17_5",
+			Q17_6: "Q17_6",
+			Q17_7: "Q17_7",
+
 		};
 
 		// Initialize maxWidths with header lengths
@@ -458,6 +616,8 @@ const downloadData = async () => {
 				JOUR: docData.JOUR || "",
 				HEURE_DEBUT: docData.HEURE_DEBUT || "",
 				HEURE_FIN: docData.HEURE_FIN || "",
+				Sexe: docData.Sexe || "",
+				Age: docData.Age || "",
 				Q1: docData.Q1 || "",
 				Q2: docData.Q2 || "",
 				Q2_DETAIL: docData.Q2_DETAIL || "",
@@ -479,6 +639,13 @@ const downloadData = async () => {
 				Q15: docData.Q15 || "",
 				Q16: docData.Q16 || "",
 				Q16_DETAIL: docData.Q16_DETAIL || "",
+				Q17_1: docData.Q17_1 || "",
+				Q17_2: docData.Q17_2 || "",
+				Q17_3: docData.Q17_3 || "",
+				Q17_4: docData.Q17_4 || "",
+				Q17_5: docData.Q17_5 || "",
+				Q17_6: docData.Q17_6 || "",
+				Q17_7: docData.Q17_7 || "",
 			};
 
 			if (docData.Q6) {
