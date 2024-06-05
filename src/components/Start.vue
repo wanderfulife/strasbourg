@@ -272,7 +272,8 @@
 			<button @click="back" class="btn-return">retour</button>
 		</div>
 
-		<div>
+		<div v-if="((level === 17 && Q1 === 2 || level === 15 && Q1 === 1) && Q14 === 1) ||
+			((level === 16 && Q1 === 2 || level === 14 && Q1 === 1) && Q14 === 2)">
 			<button @click="submitSurvey" class="btn-next">FINIR QUESTIONNAIRE</button>
 			<button @click="back" class="btn-return">retour</button>
 		</div>
