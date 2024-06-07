@@ -91,8 +91,11 @@
 		</div>
 
 		<div id="q7" v-if="(level === 7 && Q1 === 2 || level === 5 && Q1 === 1) && Q5 === 2">
-			<h1> Connaissez-vous le principe
-				d’une zone de rencontre ? </h1>
+			<h2> Connaissez-vous le principe
+				d’une zone de rencontre ? </h2>
+
+			<h1>La zone de rencontre est un dispositif qui cherche à faire cohabiter de manière apaisée dans un même
+				espace tous les usagers, tels que les piétons, les cyclistes, et les automobilistes.</h1>
 			<select v-model="Q7" class="form-control">
 				<option v-for="option in q7" :key="option.id" :value="option.output">
 					{{ option.text }}
@@ -232,7 +235,7 @@
 			<button @click="back" class="btn-return">retour</button>
 		</div>
 
-		<div id="q15" v-if="(level === 15 && Q1 === 2 || level === 13 && Q1 === 1) && Q14 === 1">
+		<div id="q15" v-if="((level === 15 && Q1 === 2 || level === 13 && Q1 === 1) && Q14 === 1)">
 			<h1> Être dans une zone de rencontre est-il avantageux pour votre activité ?</h1>
 			<select v-model="Q15" class="form-control">
 				<option v-for="option in q15" :key="option.id" :value="option.output">
@@ -244,8 +247,7 @@
 		</div>
 
 
-		<div id="q16" v-if="((level === 16 && Q1 === 2 || level === 14 && Q1 === 1) && Q14 === 1) ||
-	((level === 15 && Q1 === 2 || level === 13 && Q1 === 1) && Q14 === 2)">
+		<div id="q16" v-if="((level === 16 && Q1 === 2 || level === 14 && Q1 === 1) && Q14 === 1 && Q15 === 1)">
 			<h1>Pourquoi ?</h1>
 			<br>
 			<label for="1">Plus de passage</label>
@@ -273,10 +275,9 @@
 		</div>
 
 
-
-
-		<div id="q17_1" v-if="((level === 17 && Q1 === 2 || level === 15 && Q1 === 1) && Q14 === 1) ||
-			((level === 16 && Q1 === 2 || level === 14 && Q1 === 1) && Q14 === 2)">
+		<div id="q17_1"
+			v-if="((level === 17 && Q1 === 2 || level === 15 && Q1 === 1) && Q14 === 1 && Q15 === 1) ||
+	((level === 15 && Q1 === 2 || level === 13 && Q1 === 1) && Q14 === 2) || ((level === 16 && Q1 === 2 || level === 14 && Q1 === 1) && Q14 === 1 && Q15 === 2)">
 			<h2>Que souhaiteriez-vous améliorer dans ces zones ?</h2>
 			<h1> Avoir plus d'espace de repos
 				(bancs, espaces verts) </h1>
@@ -289,8 +290,9 @@
 			<button @click="back" class="btn-return">retour</button>
 		</div>
 
-		<div id="q17_2" v-if="((level === 18 && Q1 === 2 || level === 16 && Q1 === 1) && Q14 === 1) ||
-			((level === 17 && Q1 === 2 || level === 15 && Q1 === 1) && Q14 === 2)">
+		<div id="q17_2"
+			v-if="((level === 18 && Q1 === 2 || level === 16 && Q1 === 1) && Q14 === 1 && Q15 === 1) ||
+	((level === 16 && Q1 === 2 || level === 14 && Q1 === 1) && Q14 === 2) || ((level === 17 && Q1 === 2 || level === 15 && Q1 === 1) && Q14 === 1 && Q15 === 2)">
 			<h2>Que souhaiteriez-vous améliorer dans ces zones ?</h2>
 			<h1> Amélioration vis-à-vis du stationnement illicite / sauvage</h1>
 			<select v-model="Q17_2" class="form-control">
@@ -302,8 +304,9 @@
 			<button @click="back" class="btn-return">retour</button>
 		</div>
 
-		<div id="q17_3" v-if="((level === 19 && Q1 === 2 || level === 17 && Q1 === 1) && Q14 === 1) ||
-			((level === 18 && Q1 === 2 || level === 16 && Q1 === 1) && Q14 === 2)">
+		<div id="q17_3"
+			v-if="((level === 19 && Q1 === 2 || level === 17 && Q1 === 1) && Q14 === 1 && Q15 === 1) ||
+	((level === 17 && Q1 === 2 || level === 15 && Q1 === 1) && Q14 === 2) || ((level === 18 && Q1 === 2 || level === 16 && Q1 === 1) && Q14 === 1 && Q15 === 2)">
 			<h2>Que souhaiteriez-vous améliorer dans ces zones ?</h2>
 			<h1> Amélioration de la signalisation pour une meilleure compréhension des zones de rencontre</h1>
 			<select v-model="Q17_3" class="form-control">
@@ -315,8 +318,9 @@
 			<button @click="back" class="btn-return">retour</button>
 		</div>
 
-		<div id="q17_4" v-if="((level === 20 && Q1 === 2 || level === 18 && Q1 === 1) && Q14 === 1) ||
-			((level === 19 && Q1 === 2 || level === 17 && Q1 === 1) && Q14 === 2)">
+		<div id="q17_4"
+			v-if="((level === 20 && Q1 === 2 || level === 18 && Q1 === 1) && Q14 === 1 && Q15 === 1) ||
+	((level === 18 && Q1 === 2 || level === 16 && Q1 === 1) && Q14 === 2) || ((level === 19 && Q1 === 2 || level === 17 && Q1 === 1) && Q14 === 1 && Q15 === 2)">
 			<h2>Que souhaiteriez-vous améliorer dans ces zones ?</h2>
 			<h1>Faire des actions de communication pour le respect et la connaissance des zones de rencontre</h1>
 			<select v-model="Q17_4" class="form-control">
@@ -328,8 +332,9 @@
 			<button @click="back" class="btn-return">retour</button>
 		</div>
 
-		<div id="q17_5" v-if="((level === 21 && Q1 === 2 || level === 19 && Q1 === 1) && Q14 === 1) ||
-			((level === 20 && Q1 === 2 || level === 18 && Q1 === 1) && Q14 === 2)">
+		<div id="q17_5"
+			v-if="((level === 21 && Q1 === 2 || level === 19 && Q1 === 1) && Q14 === 1 && Q15 === 1) ||
+	((level === 19 && Q1 === 2 || level === 17 && Q1 === 1) && Q14 === 2) || ((level === 20 && Q1 === 2 || level === 18 && Q1 === 1) && Q14 === 1 && Q15 === 2)">
 			<h2>Que souhaiteriez-vous améliorer dans ces zones ?</h2>
 			<h1>Faire un marquage spécifique au sol pour une meilleure compréhension</h1>
 			<select v-model="Q17_5" class="form-control">
@@ -341,8 +346,9 @@
 			<button @click="back" class="btn-return">retour</button>
 		</div>
 
-		<div id="q17_6" v-if="((level === 22 && Q1 === 2 || level === 20 && Q1 === 1) && Q14 === 1) ||
-			((level === 21 && Q1 === 2 || level === 19 && Q1 === 1) && Q14 === 2)">
+		<div id="q17_6"
+			v-if="((level === 22 && Q1 === 2 || level === 20 && Q1 === 1) && Q14 === 1 && Q15 === 1) ||
+	((level === 20 && Q1 === 2 || level === 18 && Q1 === 1) && Q14 === 2) || ((level === 21 && Q1 === 2 || level === 19 && Q1 === 1) && Q14 === 1 && Q15 === 2)">
 			<h2>Que souhaiteriez-vous améliorer dans ces zones ?</h2>
 			<h1>Changement de régime (Zone 30, Aire piétonne)</h1>
 			<select v-model="Q17_6" class="form-control">
@@ -355,8 +361,9 @@
 		</div>
 
 
-		<div id="q17_7" v-if="((level === 23 && Q1 === 2 || level === 21 && Q1 === 1) && Q14 === 1) ||
-			((level === 22 && Q1 === 2 || level === 20 && Q1 === 1) && Q14 === 2)">
+		<div id="q17_7"
+			v-if="((level === 23 && Q1 === 2 || level === 21 && Q1 === 1) && Q14 === 1 && Q15 === 1) ||
+	((level === 21 && Q1 === 2 || level === 19 && Q1 === 1) && Q14 === 2) || ((level === 22 && Q1 === 2 || level === 20 && Q1 === 1) && Q14 === 1 && Q15 === 2)">
 			<h2>Que souhaiteriez-vous améliorer dans ces zones ?</h2>
 			<h1>Réaménagement de la rue (suppression du trottoir)</h1>
 			<select v-model="Q17_7" class="form-control">
@@ -368,8 +375,9 @@
 			<button @click="back" class="btn-return">retour</button>
 		</div>
 
-		<div id="sexe" v-if="((level === 24 && Q1 === 2 || level === 22 && Q1 === 1) && Q14 === 1) ||
-			((level === 23 && Q1 === 2 || level === 21 && Q1 === 1) && Q14 === 2)">
+		<div id="sexe"
+			v-if="((level === 24 && Q1 === 2 || level === 22 && Q1 === 1) && Q14 === 1 && Q15 === 1) ||
+	((level === 22 && Q1 === 2 || level === 20 && Q1 === 1) && Q14 === 2) || ((level === 23 && Q1 === 2 || level === 21 && Q1 === 1) && Q14 === 1 && Q15 === 2)">
 			<h2>Sexe de la personne interviewé ?</h2>
 			<select v-model="Sexe" class="form-control">
 				<option v-for="option in sexe" :key="option.id" :value="option.output">
@@ -380,8 +388,9 @@
 			<button @click="back" class="btn-return">retour</button>
 		</div>
 
-		<div id="age" v-if="((level === 25 && Q1 === 2 || level === 23 && Q1 === 1) && Q14 === 1) ||
-			((level === 24 && Q1 === 2 || level === 22 && Q1 === 1) && Q14 === 2)">
+		<div id="age"
+			v-if="((level === 25 && Q1 === 2 || level === 23 && Q1 === 1) && Q14 === 1 && Q15 === 1) ||
+	((level === 23 && Q1 === 2 || level === 21 && Q1 === 1) && Q14 === 2) || ((level === 24 && Q1 === 2 || level === 22 && Q1 === 1) && Q14 === 1 && Q15 === 2)">
 			<h2>Age de la personne interviewé ?</h2>
 			<select v-model="Age" class="form-control">
 				<option v-for="option in age" :key="option.id" :value="option.output">
@@ -393,8 +402,9 @@
 		</div>
 
 
-		<div v-if="((level === 26 && Q1 === 2 || level === 24 && Q1 === 1) && Q14 === 1) ||
-			((level === 25 && Q1 === 2 || level === 23 && Q1 === 1) && Q14 === 2)">
+		<div
+			v-if="((level === 26 && Q1 === 2 || level === 24 && Q1 === 1) && Q14 === 1 && Q15 === 1) ||
+	((level === 24 && Q1 === 2 || level === 22 && Q1 === 1) && Q14 === 2) || ((level === 25 && Q1 === 2 || level === 23 && Q1 === 1) && Q14 === 1 && Q15 === 2)">
 			<button @click="submitSurvey" class="btn-next">FINIR QUESTIONNAIRE</button>
 			<button @click="back" class="btn-return">retour</button>
 		</div>
